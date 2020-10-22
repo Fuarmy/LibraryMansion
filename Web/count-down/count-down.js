@@ -12,7 +12,7 @@ function countDown(time, callback) {
       return timestamp === timestamp ? timestamp : '时间格式不正确！';
     }],
     ['Number', () => {
-      return time;
+      return time && time.toString().length === 10 ? time *= 1000 : time && time.toString().length === 13 ? time : '时间戳格式不正确';
     }],
     ['Date', () => {
       return time.getTime();
