@@ -3,7 +3,7 @@ const dataType = require('./../dataType/dataType');
  * 支持任意输入
  *
  * @param {string, number, Date} time 时间 
- * @param {function} 回调函数
+ * @callback  callback 回调函数
  */
 function countDown(time, callback) {
   const _typeCode = new Map([
@@ -36,7 +36,7 @@ function countDown(time, callback) {
  * 计算时间
  * 
  * @param {number} timestamp 目标时间戳
- * @param {function} timer 定时器
+ * @param {number} timer 定时器
  * @return {Object} {day,hour,minute,second}
  */
 function computerTime(timestamp, timer) {

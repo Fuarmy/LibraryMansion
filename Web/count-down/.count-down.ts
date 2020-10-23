@@ -1,5 +1,13 @@
 import dataType from '../dataType/.dataType';
 
+/**
+ * 支持任意输入
+ *
+ * @private {Map} _typeCode 存储时间各种类型的处理函数
+ * @constructor {@param, @callback} 构造器需要参数
+ * @param {string, number, Date} time 时间 
+ * @callback  callback 回调函数
+ */
 class CountDown {
   private _typeCode: Map<string,Function> = new Map([
     ['String', (time): number | string => {
@@ -28,7 +36,15 @@ class CountDown {
       callback(timestamp);
     }
   }
-  public computerTime(timestamp, timer): object | string {
+
+  /**
+   * 计算时间
+   * 
+   * @param {number} timestamp 目标时间戳
+   * @param {number} timer 定时器
+   * @return {Object} {day,hour,minute,second}
+   */
+  public computerTime(timestamp: number, timer: number): object | string {
     let currentTimestamp = new Date().getTime(); //当前时间距离1970年的毫秒数
     if (timestamp - currentTimestamp < 0) {
       clearInterval(timer);
