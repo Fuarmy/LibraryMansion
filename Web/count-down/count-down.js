@@ -6,7 +6,7 @@ const dataType = require('./../dataType/dataType');
  * @param {function} 回调函数
  */
 function countDown(time, callback) {
-  const TypeCode = new Map([
+  const _typeCode = new Map([
     ['String', () => {
       let timestamp = new Date(time.replace(/-/g,'/')).getTime();
       return timestamp === timestamp ? timestamp : '时间格式不正确！';
@@ -21,7 +21,7 @@ function countDown(time, callback) {
       return '参数类型不符！';
     }]
   ])
-  let timestamp = TypeCode.get(dataType(time) === 'String'|| dataType(time) === 'Number'|| dataType(time) === 'Date' ? dataType(time) : 'Other').call();
+  let timestamp = _typeCode.get(dataType(time) === 'String'|| dataType(time) === 'Number'|| dataType(time) === 'Date' ? dataType(time) : 'Other').call();
   if(dataType(timestamp) === 'Number') {
     let timer = '';
     timer = setInterval(() => {
