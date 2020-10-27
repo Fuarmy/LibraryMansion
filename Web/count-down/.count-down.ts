@@ -4,9 +4,8 @@ import dataType from '../dataType/.dataType';
  * 支持任意输入
  *
  * @private {Map} _typeCode 存储时间各种类型的处理函数
- * @constructor {@param, @callback} 构造器需要参数
+ * @constructor {} 构造器
  * @param {string, number, Date} time 时间 
- * @callback  callback 回调函数
  */
 class CountDown {
   private _typeCode: Map<string,Function> = new Map([
@@ -24,18 +23,7 @@ class CountDown {
       return '参数类型不符！';
     }]
   ]);
-  constructor(time: any, callback: Function) {
-    let typeCode = dataType(time) === 'String'|| dataType(time) === 'Number'|| dataType(time) === 'Date' ? dataType(time) : 'Other';
-    let timestamp = this._typeCode.get(typeCode).call(this,time);
-    if(dataType(timestamp) === 'Number') {
-      let timer: number;
-      timer = setInterval(() => {
-        callback(this.computerTime(timestamp,timer));
-      }, 1000, timestamp, timer);
-    } else {
-      callback(timestamp);
-    }
-  }
+  constructor() {}
 
   /**
    * 计算时间
@@ -58,6 +46,23 @@ class CountDown {
     let minute = Math.floor(second / 60);
     second %= 60;
     return {day,hour,minute,second};
+  }
+  /**
+   * 倒计时函数
+   * @param {*} time 目标时间
+   * @callback callback 回调函数
+   */
+  public setCountDown(time: any, callback: Function) {
+    let typeCode = dataType(time) === 'String'|| dataType(time) === 'Number'|| dataType(time) === 'Date' ? dataType(time) : 'Other';
+    let timestamp = this._typeCode.get(typeCode).call(this,time);
+    if(dataType(timestamp) === 'Number') {
+      let timer: number;
+      timer = setInterval(() => {
+        callback(this.computerTime(timestamp,timer));
+      }, 1000, timestamp, timer);
+    } else {
+      callback(timestamp);
+    }
   }
 }
 
