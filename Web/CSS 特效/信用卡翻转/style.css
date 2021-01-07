@@ -20,8 +20,8 @@ section {
 section::before {
   content: "";
   position: absolute;
-  bottom: -10%;
-  left: 40%;
+  top: 50%;
+  left: 45%;
   width: 600px;
   height: 600px;
   background: linear-gradient(#f00, #f0f);
