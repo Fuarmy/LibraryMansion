@@ -1,6 +1,4 @@
-window.onload = function() {
-  Splitting();
-}
+Splitting();
 let circle = document.querySelector(".circle");
 /**
  * 鼠标移动

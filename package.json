@@ -1,0 +1,22 @@
+{
+  "name": "code-bank",
+  "version": "1.0.0",
+  "description": "一个存放代码的地方",
+  "main": "index.js",
+  "scripts": {
+    "dev:Web.CSS": "browser-sync start --server --files 'Web/CSS 特效/**/*.css, Web/CSS 特效/**/*.html,'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fuarmy/LibraryMansion.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Fuarmy/LibraryMansion/issues"
+  },
+  "homepage": "https://github.com/Fuarmy/LibraryMansion#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.13"
+  }
+}
