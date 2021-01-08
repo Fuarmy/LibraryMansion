@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>视差滚动</title>
+  <link rel="stylesheet" href="plugins/jarallax.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <section>
+    <div class="box">
+      <h2 data-jarallax-element="0 -200">Awesome Parallax Scrolling</h2>
+      <div class="container">
+        <div class="imgBox" class="jarallax"><img class="jarallax-img" src="images/bg1.jpg" alt=""></div>
+        <div class="content" data-jarallax-element="-200 0">
+          <p>Vue (pronounced /vjuː/, like view) is a progressive framework for building user interfaces. Unlike other monolithic frameworks, Vue is designed from the ground up to be incrementally adoptable. The core library is focused on the view layer only, and is easy to pick up and integrate with other libraries or existing projects.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="box">
+      <h2 data-jarallax-element="0 200">Awesome Parallax Scrolling</h2>
+      <div class="container">
+        <div class="imgBox" class="jarallax"><img class="jarallax-img" src="images/bg2.jpg" alt=""></div>
+        <div class="content" data-jarallax-element="-200 0">
+          <p>Vue (pronounced /vjuː/, like view) is a progressive framework for building user interfaces. Unlike other monolithic frameworks, Vue is designed from the ground up to be incrementally adoptable. The core library is focused on the view layer only, and is easy to pick up and integrate with other libraries or existing projects.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="box">
+      <h2 data-jarallax-element="0 -200">Awesome Parallax Scrolling</h2>
+      <div class="container">
+        <div class="imgBox" class="jarallax"><img class="jarallax-img" src="images/bg3.jpg" alt=""></div>
+        <div class="content" data-jarallax-element="-200 0">
+          <p>Vue (pronounced /vjuː/, like view) is a progressive framework for building user interfaces. Unlike other monolithic frameworks, Vue is designed from the ground up to be incrementally adoptable. The core library is focused on the view layer only, and is easy to pick up and integrate with other libraries or existing projects.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="box">
+      <h2 data-jarallax-element="0 200">Awesome Parallax Scrolling</h2>
+      <div class="container">
+        <div class="imgBox" class="jarallax"><img class="jarallax-img" src="images/bg1.jpg" alt=""></div>
+        <div class="content" data-jarallax-element="-200 0">
+          <p>Vue (pronounced /vjuː/, like view) is a progressive framework for building user interfaces. Unlike other monolithic frameworks, Vue is designed from the ground up to be incrementally adoptable. The core library is focused on the view layer only, and is easy to pick up and integrate with other libraries or existing projects.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="plugins/jarallax.js"></script>
+  <script src="plugins/jarallax-element.js"></script>
+  <script>
+    jarallax(document.querySelectorAll('.jarallax'), {
+        speed: 0.5
+    });
+  </script>
+</body>
+</html>
