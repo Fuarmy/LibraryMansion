@@ -4,7 +4,7 @@
   "description": "一个存放代码的地方",
   "main": "index.js",
   "scripts": {
-    "dev:Web.CSS": "browser-sync start --server --files 'Web/CSS 特效/**/*.css, Web/CSS 特效/**/*.html,'"
+    "dev": "browser-sync start --server --files 'Web/CSS 特效/**/*.css, Web/CSS 特效/**/*.html,'"
   },
   "repository": {
     "type": "git",
