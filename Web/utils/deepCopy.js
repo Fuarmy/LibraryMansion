@@ -15,3 +15,20 @@ const copyObj = (originObj) => {
 
     return newObj;
 }
+/**
+ * 正则拷贝
+ * @param {*} target 
+ * @param {*} isDeep 
+ * @returns 
+ */
+function copyReg(target, isDeep) {
+    var regFlag = /\w*$/;
+    var result = new target.constructor(target.source, regFlag.exec(target));
+    if (isDeep) {
+        result.lastIndex = 0;
+    } else {
+        result.lastIndex = target.lastIndex;
+    }
+
+    return result;
+}
