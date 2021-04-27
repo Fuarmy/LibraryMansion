@@ -4,6 +4,7 @@
  * @returns 
  */
 const copyObj = (originObj) => {
+    // 可能有误
     const originPrototype = Object.getPrototypeOf(originObj);
     let newObj = Object.create(originPrototype);
 
