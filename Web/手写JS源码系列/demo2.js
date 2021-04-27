@@ -16,11 +16,11 @@
                 return `"${jsonStr.toJSON ? jsonStr.toJSON() : jsonStr.toString()}"`;
             case '[object Object]':
                 let resultObj = '{';
-                Object.getOwnPropertyNames(jsonStr).forEach((key) => {
+                for(key in jsonStr) {
                     if(this.stringify(key) !== undefined && this.stringify(jsonStr[key]) !== undefined) {
                         resultObj += `"${key}":${this.stringify(jsonStr[key])},`;
                     }
-                });
+                }
                 resultObj = resultObj.slice(0, -1);
                 return resultObj += '}';
             case '[object Array]': 
